@@ -221,7 +221,7 @@ namespace webrtc
         AudioClientProperties prop = { 0 };
         prop.cbSize = sizeof(AudioClientProperties);
         prop.bIsOffload = 0;
-        prop.eCategory = AudioCategory_Communications;
+        prop.eCategory = AudioCategory_GameChat;
         prop.Options = AUDCLNT_STREAMOPTIONS_NONE;
         hr = audioClient->SetClientProperties(&prop);
 
@@ -396,7 +396,7 @@ namespace webrtc
         AudioClientProperties prop = { 0 };
         prop.cbSize = sizeof(AudioClientProperties);
         prop.bIsOffload = 0;
-        prop.eCategory = AudioCategory_Communications;
+        prop.eCategory = AudioCategory_GameChat;
         prop.Options = AUDCLNT_STREAMOPTIONS_NONE;
         hr = audioClient->SetClientProperties(&prop);
 
