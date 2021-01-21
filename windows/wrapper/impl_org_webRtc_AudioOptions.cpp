@@ -118,6 +118,12 @@ static void apply(const NativeType &from, WrapperImplType &to)
   if (from.audio_network_adaptor_config.has_value()) {
     to.audioNetworkAdaptorConfig = from.audio_network_adaptor_config.value();
   }
+  if (from.audio_device_id.has_value()) {
+    to.deviceId = from.audio_device_id.value();
+  }
+  if (from.audio_loopback.has_value()) {
+    to.loopback = from.audio_loopback.value();
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -187,6 +193,12 @@ static void apply(const WrapperImplType &from, NativeType &to)
   }
   if (from.audioNetworkAdaptorConfig.hasData()) {
     to.audio_network_adaptor_config = from.audioNetworkAdaptorConfig;
+  }
+  if (from.deviceId.hasData()) {
+    to.audio_device_id = from.deviceId;
+  }
+  if (from.loopback.has_value()) {
+    to.audio_loopback = from.loopback.value();
   }
 }
 

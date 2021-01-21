@@ -150,6 +150,11 @@ namespace org
       /// Config string for audio network adaptor.
       /// </summary>
       string audioNetworkAdaptorConfig;
+
+      [optional]
+      bool loopback;
+
+      string deviceId;
     };
   }
 }
